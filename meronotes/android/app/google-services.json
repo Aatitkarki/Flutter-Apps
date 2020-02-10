@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "301348539827",
+    "firebase_url": "https://mero-notes.firebaseio.com",
+    "project_id": "mero-notes",
+    "storage_bucket": "mero-notes.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:301348539827:android:c66ac99fc4a18fad83cfc6",
+        "android_client_info": {
+          "package_name": "com.sureshk.meronotes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "301348539827-rbf4f0cugg62ve0lk3jernt24ud4jndq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sureshk.meronotes",
+            "certificate_hash": "7802d72f1037ab0ba5d9245ecd7384f90481f329"
+          }
+        },
+        {
+          "client_id": "301348539827-hrh294bo75vsio9tv189nab86hsjgquh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXjv1ZqsNW28djE7g0N-fxqW8xTf0nw60"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "301348539827-hrh294bo75vsio9tv189nab86hsjgquh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

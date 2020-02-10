@@ -12,44 +12,55 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      home: ExampleApp(),
     );
   }
 }
 
-class HomePage extends StatefulWidget {
+class ExampleApp extends StatefulWidget {
   @override
-  _HomePageState createState() => _HomePageState();
+  _ExampleAppState createState() => new _ExampleAppState();
 }
 
-class _HomePageState extends State<HomePage> {
-  List <Song> _songs;
-  @override
-  void initState() async{
-    super.initState();
-   var songs =await MusicFinder.allSongs();
-   songs = List.from(songs);
+class _ExampleAppState extends State<ExampleApp> {
 
-   setState(() {
-     _songs = songs;
-   });
+  MusicFinder audioPlayer;
+
+  @override
+  initState() {
+    super.initState();
+    audioPlayer = new MusicFinder();
+    fetchSongs();
   }
+
+  Future fetchSongs() async {
+    List<Song> songs;
+    try {
+      songs = await MusicFinder.allSongs();
+    } catch(e) {
+      print(e.toString());
+    }
+
+    if (songs.isNotEmpty) {
+      audioPlayer.play(songs.first.uri);
+    }
+  }
+
+  @override
+  void dispose() {
+    audioPlayer = null;
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Black Player'),
+    return Material(
+      child: Scaffold(
+        appBar: AppBar(
+          title: const Text('Flute Music Player Example'),
+        ),
+        body: Container(),
       ),
-      body: ListView.builder(
-        itemCount:_songs.length ,itemBuilder: (context,int index){
-          return ListTile(
-            leading: CircleAvatar(
-              child: Text(_songs[index].title[0])
-            ),
-            trailing: Text(_songs[index].title),
-          );
-        })
-      
     );
   }
 }
