@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meronotes/firebase_auth.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -39,26 +40,16 @@ class _LoginPageState extends State<LoginPage> {
                     height: kToolbarHeight,
                   ),
                   Container(
-                    decoration: BoxDecoration(
-                        color: Colors.white, shape: BoxShape.circle),
                     height: 80,
                     width: 80,
+                    child: Icon(FontAwesomeIcons.user,size: 60,color: Colors.purple,),
+                    // decoration: BoxDecoration(
+                    //     color: Colors.white, shape: BoxShape.circle),
+                    // height: 80,
+                    // width: 80,
                   ),
-                  SizedBox(
-                    height: 30,
-                  ),
-                  RaisedButton(
-                    textColor: Colors.white,
-                    child: Text("Continue with Google"),
-                    color: Colors.red,
-                    onPressed: ()async{
-                      bool res =  await AuthProvider().loginWithGoogle();
-                      if(!res){
-                        print("Error in login with google.");
-                      }
-                    },
-                  ),
-                  SizedBox(height: 30),
+                  
+                  SizedBox(height: 90),
                   AnimatedSwitcher(duration: Duration(milliseconds: 200),
                   child: signInForm ? LoginForm():SingUpForm(),
                   ),
@@ -75,7 +66,22 @@ class _LoginPageState extends State<LoginPage> {
                         setState(() {
                           signInForm=!signInForm;
                         });
-                      })
+                      }),
+                      SizedBox(
+                    height: 30,
+                  ),
+                  RaisedButton(
+                    textColor: Colors.white,
+                    child: Text("Continue with Google"),
+                    color: Colors.red,
+                    onPressed: (){},
+                    // onPressed: ()async{
+                    //   bool res =  await AuthProvider().loginWithGoogle();
+                    //   if(!res){
+                    //     print("Error in login with google.");
+                    //   }
+                    // },
+                  ),
                 ],
               ),
             ),
@@ -208,7 +214,7 @@ class SingUpForm extends StatelessWidget {
             height: 30,
           ),
           TextField(
-            obscureText: true,
+            obscureText: false,
               focusNode: confirmPasswordField,
               decoration: InputDecoration(
                 labelText: "Confirm Password",

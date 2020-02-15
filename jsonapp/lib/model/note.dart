@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:convert';
 
-import 'package:meronotes/pages/noteedit.dart';
-
 class Note {
   final String title;
   final String description;
@@ -67,10 +65,8 @@ class _NotesListState extends State<NotesList> {
             );
           }),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.push(context, MaterialPageRoute(builder: (context)=>NoteEdit()));
-        },
-        child: Icon(Icons.add), 
+        onPressed: () {},
+        child: Icon(Icons.add),
         backgroundColor: Colors.blue,
         elevation: 10,
         tooltip: 'AddNote',

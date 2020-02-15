@@ -1,5 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:google_sign_in/google_sign_in.dart';
+// import 'package:google_sign_in/google_sign_in.dart';
 
 class AuthProvider {
   final FirebaseAuth _auth = FirebaseAuth.instance;
@@ -30,21 +30,21 @@ class AuthProvider {
       print("Error Logging Out");
     }
   }
-
-  Future<bool> loginWithGoogle() async {
-    try {
-      GoogleSignIn googleSignIn = GoogleSignIn();
-      GoogleSignInAccount account = await googleSignIn.signIn();
-      if (account == null) return false;
-      AuthResult res = await _auth.signInWithCredential(
-          GoogleAuthProvider.getCredential(
-              idToken: (await account.authentication).idToken,
-              accessToken: (await account.authentication).accessToken));
-      if (res.user == null) return false;
-      return true;
-    } catch (e) {
-      print("Error Logging with Google");
-      return false;
-    }
-  }
+    // Sign in with google
+  // Future<bool> loginWithGoogle() async {
+  //   try {
+  //     GoogleSignIn googleSignIn = GoogleSignIn();
+  //     GoogleSignInAccount account = await googleSignIn.signIn();
+  //     if (account == null) return false;
+  //     AuthResult res = await _auth.signInWithCredential(
+  //         GoogleAuthProvider.getCredential(
+  //             idToken: (await account.authentication).idToken,
+  //             accessToken: (await account.authentication).accessToken));
+  //     if (res.user == null) return false;
+  //     return true;
+  //   } catch (e) {
+  //     print("Error Logging with Google");
+  //     return false;
+  //   }
+  // }
 }
