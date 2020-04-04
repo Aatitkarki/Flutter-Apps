@@ -16,22 +16,19 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.green,
           buttonTheme: ButtonThemeData(
             buttonColor: Colors.green,
+            height: 30,
             textTheme: ButtonTextTheme.primary,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(30),
+              borderRadius: BorderRadius.circular(20),
             ),
-            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+            padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
           ),
           inputDecorationTheme: InputDecorationTheme(
-              contentPadding:
-                  EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(30),
-              ),
+              
               labelStyle:
                   TextStyle(fontSize: 18, color: Colors.grey.shade700))),
       home: HomePage(),
-    );  
+    );
   }
 }
 
