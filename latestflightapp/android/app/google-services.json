@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "157781598847",
+    "firebase_url": "https://flightbook-a58a3.firebaseio.com",
+    "project_id": "flightbook-a58a3",
+    "storage_bucket": "flightbook-a58a3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:157781598847:android:692d472074b5888537d54a",
+        "android_client_info": {
+          "package_name": "com.sureshk.latestflightapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "157781598847-t8m0bgsike7m5fcua1ogaaqhgbi0mp3s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sureshk.latestflightapp",
+            "certificate_hash": "7802d72f1037ab0ba5d9245ecd7384f90481f329"
+          }
+        },
+        {
+          "client_id": "157781598847-ira9p3d70k07tnud4g3pavgkp1id7g4p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJLXDMltSoKShECd7DgNvEKGNJqErE_EI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "157781598847-ira9p3d70k07tnud4g3pavgkp1id7g4p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
